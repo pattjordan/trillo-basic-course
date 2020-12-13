@@ -452,9 +452,11 @@
         width: 1rem;
         margin-right: .7rem;
 
+
+        // OLDER BROWSERS - Used if @supports is negative
         // Old approach -> Problem: If included as background image, color can not be changed
-        // background-image: url(../img/chevron-thin-right.svg);
-        // background-size: cover;
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
         // NEWER BROWSERS - MASKS
         // New approach: usage of masks (works in newer browsers)
@@ -467,9 +469,11 @@
 
             mask-image: url(../img/chevron-thin-right.svg);
             mask-size: cover;
+
+            background-image: none; // Remove setting from "odler browser" setting to apply new method (colored icon)
         }
         
-        // OLDER BROWSERS - WORKAORUND
+        
         
         
     }
